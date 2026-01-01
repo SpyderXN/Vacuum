@@ -9,7 +9,7 @@ friction = 0.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8h54"]
 size = Vector2(115, 119)
 
-[node name="Player" type="RigidBody2D"]
+[node name="Player" type="RigidBody2D" groups=["Player"]]
 mass = 0.244
 physics_material_override = SubResource("PhysicsMaterial_4ntmi")
 gravity_scale = 0.0

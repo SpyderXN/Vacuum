@@ -15,6 +15,16 @@ run/main_scene="uid://06pdgadp42b8"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://GameManager/game_manager.gd"
+
+[global_group]
+
+Obstacles=""
+Player=""
+Refueling=""
+
 [input]
 
 Push={

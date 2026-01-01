@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfs0kn7nxy7yo"]
+
+[ext_resource type="Script" uid="uid://fqm5haf4fem3" path="res://Asteroids/asteroid.gd" id="1_gc8g2"]
+[ext_resource type="Texture2D" uid="uid://4y3a7jhd4ee" path="res://icon.svg" id="1_v5rxd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5rxd"]
+size = Vector2(112, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gc8g2"]
+size = Vector2(112, 108)
+
+[node name="Asteroid" type="StaticBody2D" groups=["Obstacles"]]
+script = ExtResource("1_gc8g2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_v5rxd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v5rxd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gc8g2")
+debug_color = Color(0.85371965, 0.28454638, 0.6044184, 0.41960785)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

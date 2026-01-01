@@ -1,9 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://06pdgadp42b8"]
+[gd_scene load_steps=4 format=3 uid="uid://06pdgadp42b8"]
 
 [ext_resource type="PackedScene" uid="uid://dufhgkq4sl4cn" path="res://Player/player.tscn" id="1_yh5la"]
+[ext_resource type="PackedScene" uid="uid://bfs0kn7nxy7yo" path="res://Asteroids/asteroid.tscn" id="2_2w1kt"]
+[ext_resource type="PackedScene" uid="uid://b46dug2i55d4c" path="res://RefuelingStation/refueling_station.tscn" id="3_qvhan"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_yh5la")]
 position = Vector2(497, 246)
 push_speed = 500
+
+[node name="Asteroid" parent="." instance=ExtResource("2_2w1kt")]
+position = Vector2(900, 425)
+
+[node name="RefuelingStation" parent="." instance=ExtResource("3_qvhan")]
+position = Vector2(186, 172)
+refill_fuel = 100.0
